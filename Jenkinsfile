@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+    environment {
+        DOCKER_USER = credentials('docker-username')
+        DOCKER_PASS = credentials('docker-password')
+    }
+    
     stages {
         stage('Clone') {
             steps {
@@ -23,8 +29,5 @@ pipeline {
             }
         }
     }
-    environment {
-        DOCKER_USER = credentials('docker-username')
-        DOCKER_PASS = credentials('docker-password')
-    }
+    
 }

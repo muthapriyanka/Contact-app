@@ -4,6 +4,7 @@ pipeline {
     environment {
         DOCKER_USER = credentials('docker-username')
         DOCKER_PASS = credentials('docker-password')
+        DOCKER_HOST = 'unix:///var/run/docker.sock'
     }
     
     stages {

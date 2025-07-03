@@ -24,7 +24,7 @@ pipeline {
         }
     }
     environment {
-        DOCKER_USER = credentials('pmutha27')
+        DOCKER_USER = credentials('docker-username')
         DOCKER_PASS = credentials('docker-password')
     }
 }

@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/muthapriyanka/Contact-app.git'
+                git branch: 'main', url: 'https://github.com/muthapriyanka/Contact-app.git'
             }
         }
         stage('Build & Push Backend Image') {

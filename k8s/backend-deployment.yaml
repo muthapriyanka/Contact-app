@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contact-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contact-backend
+  template:
+    metadata:
+      labels:
+        app: contact-backend
+    spec:
+      containers:
+      - name: contact-backend
+        image: pmutha27/contact-backend:latest
+        ports:
+        - containerPort: 3001

@@ -13,7 +13,7 @@ spec:
         app: contact-backend
     spec:
       containers:
-      - name: backend
-        image: your-dockerhub-username/contact-backend:latest
-        ports:
-        - containerPort: 3001
+        - name: contact-backend
+          image: pmutha27/contact-backend:latest
+          ports:
+            - containerPort: 3001
